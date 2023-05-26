@@ -1,3 +1,9 @@
+/**
+ * 작성자: 손정민
+ * 작성일: 2023-05-26
+ * 기능 업데이트 : json 데이터를 이용한 html 구조 생성 적용
+ */
+
 window.addEventListener("load", function (event) {
   const swVisualWrap = document.querySelector(".sw-visual .swiper-wrapper");
 
