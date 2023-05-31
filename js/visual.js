@@ -46,5 +46,21 @@ window.addEventListener("load", function (event) {
         clickable: true,
       },
     });
+    // 위의 구문을 통해 slide 생성되면
+    // .sw-visual-pg 에는 span 이 만들어졌을거에요.
+    // .sw-visual-pg .swiper-pagination-bullet 이 생성됨
+    // innerHTML 을 이용해 내용을 넣어보자.
+    const swVisualBullets = document.querySelectorAll(
+      ".sw-visual-pg .swiper-pagination-bullet"
+    );
+    swVisualBullets.forEach((item, index, arr) => {
+      if (index < 9) {
+        item.innerHTML = `<em>0${index + 1}</em>`;
+      } else {
+        item.innerHTML = `<em>${index + 1}</em>`;
+      }
+      // 상렬님 및 GPT 코드
+      // item.innerHTML = `<em>${index < 9 ? '0' : ''}${index + 1}</em>`;
+    });
   }
 });
