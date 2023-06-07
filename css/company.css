@@ -1,0 +1,28 @@
+.company {
+  position: relative;
+  padding-top: 200px;
+}
+.company .inner .company-wrap h2 {
+  font-size: 47px;
+  font-weight: 400;
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 40px 0;
+  line-height: 1.3;
+  color: #000;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+.company .inner .company-wrap p {
+  font-size: 17px;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: -0.3px;
+  margin-bottom: 30px;
+}
+.company-list {
+  display: grid;
+}
+.company-list .company-box {
+  position: relative;
+}/*# sourceMappingURL=company.css.map */

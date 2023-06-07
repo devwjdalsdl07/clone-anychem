@@ -1,10 +1,10 @@
 @charset "utf-8";
 .mb-wrap {
   display: flex;
-  position: fixed;
-  top: 100%;
-  left: 0;
   justify-content: flex-end;
+  position: fixed;
+  left: 0;
+  top: 100%;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
@@ -13,9 +13,10 @@
   transition: opacity 0.5s;
 }
 .mb-wrap-active {
+  opacity: 1;
   top: 0;
-  opacity: 1 !important;
 }
+
 .mb-gnb {
   max-width: 750px;
   width: 75%;
@@ -24,15 +25,16 @@
   transform: translateX(10px);
   transition: transform 0.5s;
 }
+
 .mb-wrap-active .mb-gnb {
   transform: translateX(0);
 }
 
 .mb-nav {
-  display: none;
   position: fixed;
-  top: 20px;
+  display: none;
   right: 15px;
+  top: 20px;
   width: 30px;
   height: 25px;
   border: 0;
@@ -44,29 +46,28 @@
 .mb-nav span {
   display: block;
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
   height: 2px;
 }
 .mb-nav span:nth-child(1) {
-  top: 0;
   background: #222;
+  top: 0;
   transform-origin: 0 0;
   transition: transform 0.3s;
 }
 .mb-nav span:nth-child(2) {
-  top: 50%;
-  left: 50%;
   background: #0072ff;
-  transform: translateY(-50%);
+  top: calc(50% - 1px);
+  left: 50%;
   width: 50%;
   transition: opacity 0.3s;
 }
 .mb-nav span:nth-child(3) {
+  background: #222;
   top: 100%;
   opacity: 0;
-  background: #222;
   transform-origin: 0 100%;
   transition: opacity 0.3s, transform 0.3s;
 }
@@ -80,7 +81,6 @@
   opacity: 1;
   transform: rotate(-45deg) translate(5px, 2px);
 }
-
 @media screen and (max-width: 1024px) {
   .mb-nav {
     display: block;
@@ -112,13 +112,16 @@
   align-items: center;
   line-height: 52px;
   padding: 0 20px;
+
   border-bottom: 1px solid #ddd;
   font-size: 16px;
   color: #222;
 }
+
 .side-menu > li > a > i {
   font-size: 10px;
 }
+
 .side-menu > li > .submenu {
   display: block;
   padding: 15px 20px;
@@ -128,5 +131,6 @@
 .side-menu > li > .submenu > li > a {
   display: block;
   text-align: left;
-  padding: 0 20px;
+  font-size: 14px;
+  color: #777;
 }

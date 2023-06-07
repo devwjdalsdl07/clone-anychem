@@ -1,19 +1,23 @@
 .visual {
   position: relative;
+  /* header 의 높이값 */
   margin-top: 100px;
 }
+/* header 의 높이값 */
 .visual-fixed {
-  /* header의 높이값 */
   margin-top: 100px !important;
 }
 @media screen and (max-width: 1024px) {
   .visual {
+    /* header 의 높이값 */
     margin-top: 75px;
   }
+  /* header 의 높이값 */
   .visual-fixed {
     margin-top: 75px !important;
   }
 }
+
 .visual .sw-visual {
 }
 .visual .sw-visual .swiper-wrapper .swiper-slide {
@@ -29,30 +33,34 @@
   bottom: 50px;
   z-index: 9999;
 }
-
 .sw-visual-pg .swiper-pagination-bullet {
   position: relative;
   background: none;
   border-radius: 0;
-  opacity: 0.5;
+  opacity: 1;
   margin: 0 !important;
   width: 30px;
   height: 40px;
 
   color: #fff;
+  border-bottom: 1px solid transparent;
   transition: all 0.5s;
 }
+
 .sw-visual-pg .swiper-pagination-bullet em {
   position: absolute;
   left: 0;
   top: 0;
+  color: #fff;
   font-size: 14px;
   font-weight: 400;
   color: #fff;
   font-family: "Noto Sans KR", sans-serif;
 }
+
 .sw-visual-pg .swiper-pagination-bullet-active em {
 }
+
 .sw-visual-pg .swiper-pagination-bullet-active {
   background: none;
   border-radius: 0;
@@ -150,7 +158,6 @@
     background: #0072ff;
   }
 }
-
 @media screen and (max-width: 760px) {
   .visual .sw-visual .swiper-wrapper .swiper-slide {
     height: 465px;

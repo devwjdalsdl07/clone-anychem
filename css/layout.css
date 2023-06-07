@@ -29,14 +29,17 @@ body {
 }
 /* 공통클래스 */
 .inner {
-  max-width: 1500px;
-  margin: 0 auto;
   display: block;
   position: relative;
+
   width: 100%;
+
+  max-width: 1500px;
+  margin: 0 auto;
 }
 .wrap {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
+  overflow: hidden;
 }

@@ -34,8 +34,8 @@ window.addEventListener("load", function () {
         <div class="swiper-slide">
           <a href="${item.link}" class="good-link">
             <div class="good-item">
-              <div class="good-item-img">
-                <img src="images/${item.image}" alt="${item.alt}" />
+              <div class="good-item-img" style="background-image:url(images/${item.image});">
+                
               </div>
               <div class="good-item-txt">
                 <p>${item.title}</p>
@@ -56,14 +56,14 @@ window.addEventListener("load", function () {
       loop: true,
       speed: 1000,
       slidesPerView: 3,
-      spaceBetween: 20,
-      navigation: {
-        prevEl: ".sw-goods-prev",
-        nextEl: ".sw-goods-next",
-      },
+      spaceBetween: 50,
       autoplay: {
-        delay: 1000,
+        delay: 2500,
         disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".sw-goods-next",
+        prevEl: ".sw-goods-prev",
       },
       breakpoints: {
         480: {
@@ -71,12 +71,16 @@ window.addEventListener("load", function () {
           spaceBetween: 30,
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 30,
         },
         1400: {
           slidesPerView: 3,
-          spaceBetween: 50,
+          spaceBetween: 30,
+        },
+        1600: {
+          slidesPerView: 3,
+          spaceBetween: 30,
         },
       },
     });
@@ -88,7 +92,7 @@ window.addEventListener("load", function () {
   }
 
   function focusMenu(_index) {
-    let lis = document.querySelectorAll(".goods-list li a");
+    let lis = document.querySelectorAll(".goods-list li");
     lis.forEach((item, index, arr) => {
       if (index === _index) {
         // 순서번호랑 슬라이드 번호가 같다면 add
@@ -118,6 +122,8 @@ window.addEventListener("load", function () {
         swGoods.slideToLoop(index);
       };
     });
+
+    focusMenu(0);
   }
 
   getData();
