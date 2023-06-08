@@ -168,6 +168,7 @@
   }
   .sw-goods-control {
     margin-left: 40px;
+    padding-top: 15px;
   }
 }
 @media screen and (max-width: 1500px) {
